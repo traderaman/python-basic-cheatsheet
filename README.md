@@ -1,2 +1,2 @@
 # basic
-All basic commands I learnt
+All basic commands I have learnt till now.
