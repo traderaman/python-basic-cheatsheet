@@ -93,4 +93,41 @@ print(myset)
 mylist = [1,1,1,1,2,2,2,3,3,3,]
 print(set(mylist))
 
+#BOOLEANS
+print(1 > 2)
+print(1 == 1)
+print(1 != 2)
+print(2<5<3)
+print(1<2 and 4<2)
+print('h' == 'h' or '1' == '2')
+print(not 1 == 1)
+
+#IF, ELIF, ELSE
+if 3>2:
+    print('Its True')
+
+hungry = True
+if hungry:
+    print('Feed me!')
+
+name = 'Frankie'
+if name == 'Frankie':
+    print('Hi Frankie')
+elif name == 'Sammy':
+    print('Hi Sammy')
+else:
+    print('What is you name?')
+    
+#FOR LOOP
+mylist = [1,2,3]
+for item in mylist:
+    print(item)
+for num in mylist:
+    print('Hi')
+
+list = [1,2,3,4,5,6,7,8,9,10]
+for letter in list:
+    if letter % 2 == 0:
+        print(letter)
+
 #####END######
