@@ -105,11 +105,11 @@ print(not 1 == 1)
 #IF, ELIF, ELSE
 if 3>2:
     print('Its True')
-
+#
 hungry = True
 if hungry:
     print('Feed me!')
-
+#
 name = 'Frankie'
 if name == 'Frankie':
     print('Hi Frankie')
@@ -124,22 +124,22 @@ for item in mylist:
     print(item)
 for num in mylist:
     print('Hi')
-
+#
 list = [1,2,3,4,5,6,7,8,9,10]
 for letter in list:
     if letter % 2 == 0:
         print(letter)
     else:
         print(f'Odd number: {letter} ')
-
+#
 mystring = 'Hello'
 for letters in mystring:
     print(letters)
-
+#
 newlist = [(1,2),(3,4),(5,6)]
 for a,b in newlist:
     print(a)
-
+#
 dic = {'k':'v','k2':'v2','k3':'v3'}
 for item in dic:
     print(item)
@@ -151,7 +151,7 @@ x = 0
 while x < 5:
     print(f'The value of x is {x}')
     x = x + 1  #if not provided there will be unlimited loop, as 'x' has no value.
-
+#
 x = 0
 while x < 5:
     print(f'The value of x is {x}')
@@ -184,11 +184,11 @@ while x < 5:
 mylist = [1,2,3]
 for num in range(10):
     print(num)
-
+#
 mylist = [1,2,3]
 for num in range(3,10):
     print(num)
-
+#
 mylist = [1,2,3]
 for num in range(3,11):
     print(num)
@@ -198,7 +198,7 @@ count = 0
 for letter in 'abcde':
     print('At index {} the letter is {}'.format(count,letter))
     count = count + 1
-
+#
 word = 'abcde'
 for item in enumerate(word):
     print(item)
@@ -212,7 +212,7 @@ for item in zip(list1,list2):
 #IN
 print('b' in ('x','y','z'))
 print('mykey' in {'mykey':345})
-
+#
 d = {'mykey':345}
 print(345 in d.values())
 
@@ -227,5 +227,40 @@ from random import shuffle
 #INPUT
 result = int(input('Your age is: '))  #int/float is used to take value as integer not as string
 print(result)
+
+#LIST COMPREHENSIONS
+mylist = [x for x in range(0,11)]
+print(mylist)
+#
+mynum = [x for x in range(0,11) if x%2 == 0]
+print(mynum)
+
+#SPLIT
+string = 'I am a good boy'
+print(string.split())
+
+#JOIN
+string = ['I', 'am', 'a', 'good', 'boy']
+print(' '.join(string))
+
+#DEF FUNCTION
+def say_hello(name):
+    return 'Hello ' + name
+print(say_hello('Aman'))
+#
+def names(a,b,c = 'Aman'):
+    return(a,b,c)  #or return (a,b,c)
+print(names('Axe','Bobby'))
+print(names('Axe','Bobby','Randy'))
+
+# *ARGS or ARGUMENTS
+def name(*args):
+    return(args)
+print(name('Aman','Alex','Bobby','Sandy'))
+
+# **KWARGS or KEYWORD ARGUMENTS
+def myfunc(**kwargs):
+    return(kwargs)
+print(myfunc(Name = 'Aman', Age = '21', Sex = 'Male'))
 
 #####END######
