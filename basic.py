@@ -263,4 +263,45 @@ def myfunc(**kwargs):
     return(kwargs)
 print(myfunc(Name = 'Aman', Age = '21', Sex = 'Male'))
 
+#REVERSE list or tuple
+a = [1,2,3,4,5]
+print(a[::-1])
+
+#MAP
+def square(num):
+    return num**2
+my_nums = [1,2,3,4,5]
+for items in map(square,my_nums):
+    print(items)
+#for result in list
+result = list(map(square,my_nums))
+print(result)
+#
+def splicer(mystring):
+    if len(mystring) %2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
+names = ['Aman','Raman','Albert']
+for c in map(splicer,names):
+    print(c)
+
+#FILTER
+def check_even(num):
+    return num%2 == 0
+mynums = [1,2,3,4,5,6]
+for w in filter(check_even,mynums):
+    print(w)
+#or
+w = list(filter(check_even,mynums))
+print(w)
+
+#LAMBDA
+square =lambda num: num**2
+print(square(2))
+#
+f = lambda a,b: a+b
+print(f(3,5))
+
+
 #####END######
