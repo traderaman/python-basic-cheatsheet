@@ -273,7 +273,7 @@ def square(num):
 my_nums = [1,2,3,4,5]
 for items in map(square,my_nums):
     print(items)
-#for result in list
+#for getting results in list format
 result = list(map(square,my_nums))
 print(result)
 #
