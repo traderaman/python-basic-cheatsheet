@@ -303,5 +303,85 @@ print(square(2))
 f = lambda a,b: a+b
 print(f(3,5))
 
+# OBJECT ORIENTED PROGRAMMING
+class Dog:
+    sci_name = "Canis Familiaries"
+
+    def __init__(self, name, breed, spots):
+        self.name = name
+        self.breed = breed
+        self.spots = spots
+
+    def bark(self):     # adding a Method to above object
+        return 'Woof! My name is {}'.format(self.name)
+
+my_dog = Dog(name='Sheru', breed='Lab', spots=False)
+
+print(my_dog.name)
+print(my_dog.breed)
+print(my_dog.spots)
+print(my_dog.sci_name)
+print(my_dog.bark())
+
+#Example 2
+class Circle:
+    pi = 3.14  #predefined value
+    def __init__(self,radius=1):
+        self.radius = radius
+        self.area = radius*radius*Circle.pi   # A= Pi r square
+
+    def circumference(self):
+        return self.radius*Circle.pi*2   # C= 2 Pi r
+    
+my_circle = Circle(radius=100)
+
+print(my_circle.circumference())
+
+#OOP INHERITANCE
+class Animal:
+    def __init__(self):
+        print("ANIMAL CREATED")
+    def eat(self):
+        print("I am eating")
+#lets inherit above object(Animal) to a new object(Dog)
+class Doggie(Animal):
+    def __init__(self):
+        Animal.__init__(self)    #Done
+
+my_doggie = Doggie()
+
+print(my_doggie.eat())
+
+#Example 3
+class Account:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def __str__(self):
+        return f'Account owner:   {self.owner}\nAccount balance: {self.balance}'   #\n to get balance in new line
+
+    def deposit(self, dep_amt):
+        self.balance += dep_amt
+        print('Deposit Accepted')
+
+    def withdraw(self, wd_amt):
+        if self.balance >= wd_amt:
+            self.balance -= wd_amt
+            print('Withdrawal Accepted')
+        else:
+            print('Funds Unavailable!')
+
+acct1 = Account('Jose',100)
+print(acct1)
+
+print(acct1.owner)
+print(acct1.deposit(50))
+print(acct1)
+
+print(acct1.withdraw(75))
+print(acct1)
+
+print(acct1.withdraw(500))
 
 #####END######
